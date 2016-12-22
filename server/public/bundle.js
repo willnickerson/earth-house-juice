@@ -54,13 +54,13 @@
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	__webpack_require__(22);
+	__webpack_require__(36);
 	
-	var _angularUiRouter = __webpack_require__(26);
+	var _angularUiRouter = __webpack_require__(38);
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _routes = __webpack_require__(27);
+	var _routes = __webpack_require__(39);
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
@@ -33504,11 +33504,13 @@
 	var map = {
 		"./app/app.js": 8,
 		"./articles/articles.js": 10,
-		"./footer-content/footer-content.js": 12,
-		"./header-content/header-content.js": 14,
-		"./hero-image/hero-image.js": 16,
-		"./home/home.js": 18,
-		"./nav-bar/nav-bar.js": 20
+		"./buy/buy.js": 16,
+		"./footer-content/footer-content.js": 20,
+		"./header-content/header-content.js": 24,
+		"./hero-image/hero-image.js": 26,
+		"./home/home.js": 28,
+		"./landing/landing.js": 30,
+		"./nav-bar/nav-bar.js": 34
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -33565,168 +33567,43 @@
 	
 	var _articles2 = _interopRequireDefault(_articles);
 	
+	var _articles3 = __webpack_require__(12);
+	
+	var _articles4 = _interopRequireDefault(_articles3);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	    template: _articles2.default
+	    template: _articles2.default,
+	    controller: function controller() {
+	        this.styles = _articles4.default;
+	    }
 	};
 
 /***/ },
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"articles\">\n    <div class=\"container\">\n        <section class=\"article\"></section>\n        <section class=\"article\"></section>\n        <section class=\"article\"></section>\n    </div>\n</section>";
+	module.exports = "<section class=\"articles\">\n    <div class=\"container\">\n        <section class=\"article\">\n            <article>\n                <img src=\"https://github.com/willnickerson/earth-house-juice/blob/master/top-cut.jpeg?raw=true\">\n                <p class=\"over-image\"><span>Lorem</span> ipsum dolor sit amet, consectetur adipisicing elit. Maxime in odio esse aut, ratione tenetur corporis, id ipsum, nostrum placeat pariatur expedita quam explicabo numquam hic commodi suscipit officia similique. <a ui-sref=\"buy\">Check it out!</a></p>\n            </article>\n        </section>\n        <section class=\"article\">\n            <article>\n                <p><span>Lorem ipsum</span> ipsum dolor sit amet, consectetur adipisicing elit. Maxime in odio esse aut, ratione tenetur corporis, id ipsum, nostrum placeat pariatur expedita quam explicabo numquam hic commodi suscipit officia similique. <a href=\"https://instagram.com\">Check it out!</a></p>\n                <img src=\"http://www.karenbrown.com/wp-content/uploads/2015/01/banner-Pacific-Northwest-Oregon-Mount-Hood-ohmygodtom-.jpg\">\n                \n            </article>\n\n\n        </section>\n        <section class=\"article\">\n            <article>\n                <img src=\"https://github.com/willnickerson/earth-house-juice/blob/master/blue-spread.jpeg?raw=true\">\n                <p><span>Lorem</span> dolor sit amet, consectetur adipisicing elit. <a ui-sref=\"landing\">Check it out!</a></p>\n            </article>\n        </section>\n    </div>\n</section>";
 
 /***/ },
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _footerContent = __webpack_require__(13);
-	
-	var _footerContent2 = _interopRequireDefault(_footerContent);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _footerContent2.default
-	};
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"footer\"></div>";
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _headerContent = __webpack_require__(15);
-	
-	var _headerContent2 = _interopRequireDefault(_headerContent);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _headerContent2.default
-	};
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"header-container\">\n        <div class=\"left\">\n            <h1>Earth House</h1>\n            <nav-bar></nav-bar>\n        </div>\n        <div class=\"right\">\n            <span class=\"icon-instagram\"></span>\n            <span class=\"icon-facebook2\"></span>\n            <span class=\"icon-twitter\"></span>\n        </div>\n</div>";
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _heroImage = __webpack_require__(17);
-	
-	var _heroImage2 = _interopRequireDefault(_heroImage);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _heroImage2.default,
-	    controller: function controller() {}
-	};
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	module.exports = "<img src=\"https://github.com/willnickerson/earth-house-juice/blob/master/wood-spread-1.jpeg?raw=true\">";
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _home = __webpack_require__(19);
-	
-	var _home2 = _interopRequireDefault(_home);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _home2.default,
-	    controller: function controller() {}
-	};
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	module.exports = "<hero-image></hero-image>\n<articles></articles>\n";
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _navBar = __webpack_require__(21);
-	
-	var _navBar2 = _interopRequireDefault(_navBar);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _navBar2.default
-	};
-
-/***/ },
-/* 21 */
-/***/ function(module, exports) {
-
-	module.exports = "<nav>\n    <ul>\n        <li>Home</li>\n        <li>Shop</li>\n        <li>About</li>\n        <li>Contact</li>\n    </ul>\n</nav>";
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(23);
+	var content = __webpack_require__(13);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(25)(content, {});
+	var update = __webpack_require__(15)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/sass-loader/index.js?sourceMap!./main.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/sass-loader/index.js?sourceMap!./main.scss");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./articles.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./articles.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -33736,21 +33613,21 @@
 	}
 
 /***/ },
-/* 23 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(24)();
+	exports = module.exports = __webpack_require__(14)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "body {\n  font-family: sans-serif;\n  margin: 0; }\n\nimg {\n  max-width: 100%;\n  margin: 0;\n  padding: 0;\n  z-index: 0; }\n\n.ng-isloate-scope {\n  display: none; }\n\nheader {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  height: 125px; }\n  header div {\n    position: absolute;\n    top: 5px;\n    width: 100%; }\n  header .left {\n    display: inline-block;\n    max-width: 327px; }\n  header .right {\n    margin-top: 20px;\n    float: right;\n    text-align: right; }\n    header .right span {\n      margin-right: 20px; }\n  header h1 {\n    text-align: left;\n    margin: 0 15px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 3em;\n    color: white;\n    display: inline-block; }\n  header nav {\n    margin-left: 5px; }\n    header nav ul {\n      list-style-type: none;\n      margin: 0;\n      padding: 0; }\n      header nav ul li {\n        text-align: center;\n        border-right: 1px solid white;\n        width: 23%;\n        display: inline-block;\n        color: white; }\n      header nav ul li:last-child {\n        border: none; }\n\n.articles {\n  border-top: 5px solid #BBB;\n  background-color: #DDD;\n  margin: 0;\n  padding: 0; }\n  .articles .container {\n    width: 90%;\n    margin: 0 auto; }\n    .articles .container section {\n      height: 300px;\n      width: 30%;\n      display: inline-block;\n      background-color: white;\n      margin: 35px 2%;\n      outline: 2px solid #BBB; }\n    .articles .container section:first-child {\n      margin-left: 0; }\n    .articles .container section:last-child {\n      margin-right: 0; }\n\n.icon-facebook2:before {\n  content: \"\\EA91\";\n  color: white;\n  font-size: 30px; }\n\n.icon-instagram:before {\n  content: \"\\EA92\";\n  color: white;\n  font-size: 30px; }\n\n.icon-twitter:before {\n  content: \"\\EA96\";\n  color: white;\n  font-size: 30px; }\n", "", {"version":3,"sources":["/./src/scss/src/scss/main.scss"],"names":[],"mappings":"AAAA;EACI,wBAAuB;EACvB,UAAS,EACZ;;AAED;EACI,gBAAe;EACf,UAAS;EACT,WAAU;EACV,WAAU,EACb;;AAED;EACI,cAAa,EAChB;;AAED;EACI,YAAW;EACX,mBAAkB;EAClB,OAAM;EACN,QAAO;EACP,WAAU;EACV,cAAa,EA4ChB;EAlDD;IAQQ,mBAAkB;IAClB,SAAQ;IACR,YAAW,EACd;EAXL;IAaQ,sBAAqB;IACrB,iBAAgB,EACnB;EAfL;IAiBQ,iBAAgB;IAChB,aAAY;IACZ,kBAAiB,EAIpB;IAvBL;MAqBY,mBAAkB,EACrB;EAtBT;IAyBQ,iBAAgB;IAChB,eAAc;IACd,sCAAqC;IACrC,eAAc;IACd,aAAY;IACZ,sBACJ,EAAE;EA/BN;IAiCQ,iBAAgB,EAgBnB;IAjDL;MAmCY,sBAAqB;MACrB,UAAS;MACT,WAAU,EAWb;MAhDT;QAuCgB,mBAAkB;QAClB,8BAA6B;QAC7B,WAAU;QACV,sBAAqB;QACrB,aAAY,EACf;MA5Cb;QA8CgB,aAAY,EACf;;AAKb;EACI,2BAA0B;EAC1B,uBAAsB;EACtB,UAAS;EACT,WAAU,EAmBb;EAvBD;IAMQ,WAAU;IACV,eAAc,EAejB;IAtBL;MASY,cAAa;MACb,WAAU;MACV,sBAAqB;MACrB,wBAAuB;MACvB,gBAAe;MACf,wBAAuB,EAC1B;IAfT;MAiBY,eAAc,EACjB;IAlBT;MAoBY,gBAAe,EAClB;;AAIT;EACI,iBAAgB;EAChB,aAAY;EACZ,gBAAe,EAClB;;AAED;EACI,iBAAgB;EAChB,aAAY;EACZ,gBAAe,EAClB;;AAED;EACI,iBAAgB;EAChB,aAAY;EACZ,gBAAe,EAClB","file":"main.scss","sourcesContent":["body {\n    font-family: sans-serif;\n    margin: 0;\n}\n\nimg {\n    max-width: 100%;\n    margin: 0;\n    padding: 0;\n    z-index: 0;\n}\n\n.ng-isloate-scope {\n    display: none;\n}\n\nheader {\n    width: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 1;\n    height: 125px;\n    div {\n        position: absolute;\n        top: 5px;\n        width: 100%;\n    }\n    .left {\n        display: inline-block;\n        max-width: 327px;\n    }\n    .right {\n        margin-top: 20px;\n        float: right;\n        text-align: right;\n        span {\n            margin-right: 20px;\n        }\n    }\n    h1 {\n        text-align: left;\n        margin: 0 15px;\n        font-family: 'Montserrat', sans-serif;\n        font-size: 3em;\n        color: white;\n        display: inline-block\n    }\n    nav {\n        margin-left: 5px;  \n        ul {\n            list-style-type: none;\n            margin: 0;\n            padding: 0;\n            li {\n                text-align: center;\n                border-right: 1px solid white;\n                width: 23%;\n                display: inline-block;\n                color: white;\n            }\n            li:last-child {\n                border: none;\n            }\n        }\n    }\n}\n\n.articles {\n    border-top: 5px solid #BBB;\n    background-color: #DDD;\n    margin: 0;\n    padding: 0;\n    .container {\n        width: 90%;\n        margin: 0 auto;\n        section {\n            height: 300px;\n            width: 30%;\n            display: inline-block;\n            background-color: white;\n            margin: 35px 2%;\n            outline: 2px solid #BBB;\n        }\n        section:first-child {\n            margin-left: 0;\n        }\n        section:last-child {\n            margin-right: 0;\n        }\n    }\n}\n\n.icon-facebook2:before {\n    content: \"\\ea91\";\n    color: white;\n    font-size: 30px;\n}\n\n.icon-instagram:before {\n    content: \"\\ea92\";\n    color: white;\n    font-size: 30px;\n}\n\n.icon-twitter:before {\n    content: \"\\ea96\";\n    color: white;\n    font-size: 30px;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, ".articles {\n  border-top: 5px solid #CCC;\n  background-color: #EEE;\n  margin: 0;\n  padding: 0; }\n  .articles .container {\n    width: 90%;\n    height: 370px;\n    margin: 0 auto; }\n    .articles .container section {\n      float: left;\n      height: 300px;\n      width: 30%;\n      display: block;\n      background-color: white;\n      margin: 35px 2%;\n      outline: 10px solid #CCC; }\n      .articles .container section article {\n        padding: 0;\n        width: 90%;\n        max-height: 80%;\n        margin: 0 auto; }\n        .articles .container section article img {\n          margin-top: 15px;\n          max-width: 100%; }\n        .articles .container section article #thumb {\n          max-height: 100px;\n          display: inline-block;\n          margin: 0 auto;\n          text-align: center; }\n        .articles .container section article p {\n          margin: 15px 0;\n          font-size: 1em; }\n          .articles .container section article p span {\n            font-weight: bold;\n            font-style: 'Montserrat', sans-serif;\n            font-size: 1.5em; }\n          .articles .container section article p a {\n            color: #8282ff;\n            transition: all .3s ease; }\n          .articles .container section article p a:hover {\n            color: #d4f442;\n            font-style: normal; }\n        .articles .container section article p.over-image {\n          position: relative;\n          top: -65px; }\n    .articles .container section:first-child {\n      margin-left: 0; }\n    .articles .container section:last-child {\n      margin-right: 0; }\n", "", {"version":3,"sources":["/./src/components/articles/src/components/articles/articles.scss"],"names":[],"mappings":"AAAA;EACI,2BAA0B;EAC1B,uBAAsB;EACtB,UAAS;EACT,WAAU,EA2Db;EA/DD;IAMQ,WAAU;IACV,cAAa;IACb,eAAc,EAsDjB;IA9DL;MAUY,YAAW;MACX,cAAa;MACb,WAAU;MACV,eAAc;MACd,wBAAuB;MACvB,gBAAe;MACf,yBAAwB,EAuC3B;MAvDT;QAkBgB,WAAU;QACV,WAAU;QACV,gBAAe;QACf,eAAc,EAiCjB;QAtDb;UAuBoB,iBAAgB;UAChB,gBAAe,EAClB;QAzBjB;UA2BoB,kBAAiB;UACjB,sBAAqB;UACrB,eAAc;UACd,mBAAkB,EACrB;QA/BjB;UAiCoB,eAAc;UACd,eAAc,EAejB;UAjDjB;YAoCwB,kBAAiB;YACjB,qCAAoC;YACpC,iBAAgB,EACnB;UAvCrB;YAyCwB,eAAuB;YAEvB,yBAAwB,EAC3B;UA5CrB;YA8CwB,eAAc;YACd,mBAAkB,EACrB;QAhDrB;UAmDoB,mBAAkB;UAClB,WAAU,EACb;IArDjB;MAyDY,eAAc,EACjB;IA1DT;MA4DY,gBAAe,EAClB","file":"articles.scss","sourcesContent":[".articles {\n    border-top: 5px solid #CCC;\n    background-color: #EEE;\n    margin: 0;\n    padding: 0;\n    .container {\n        width: 90%;\n        height: 370px;\n        margin: 0 auto;\n        section {\n            float: left;\n            height: 300px;\n            width: 30%;\n            display: block;\n            background-color: white;\n            margin: 35px 2%;\n            outline: 10px solid #CCC;\n            article {\n                padding: 0;\n                width: 90%;\n                max-height: 80%;\n                margin: 0 auto;\n                img {\n                    margin-top: 15px;\n                    max-width: 100%;\n                }\n                #thumb {\n                    max-height: 100px;\n                    display: inline-block;\n                    margin: 0 auto;\n                    text-align: center;\n                }\n                p { \n                    margin: 15px 0;\n                    font-size: 1em;\n                    span {\n                        font-weight: bold;\n                        font-style: 'Montserrat', sans-serif;\n                        font-size: 1.5em;\n                    }\n                    a {\n                        color: rgb(130,130,255);\n                        // font-style: italic;\n                        transition: all .3s ease;\n                    }\n                    a:hover {\n                        color: #d4f442;\n                        font-style: normal;\n                    }\n                }\n                p.over-image {\n                    position: relative;\n                    top: -65px;\n                }\n            }\n        }\n        section:first-child {\n            margin-left: 0;\n        }\n        section:last-child {\n            margin-right: 0;\n        }\n    }\n}"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
 
 /***/ },
-/* 24 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/*
@@ -33806,7 +33683,7 @@
 
 
 /***/ },
-/* 25 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -34058,7 +33935,372 @@
 
 
 /***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _buy = __webpack_require__(17);
+	
+	var _buy2 = _interopRequireDefault(_buy);
+	
+	var _buy3 = __webpack_require__(18);
+	
+	var _buy4 = _interopRequireDefault(_buy3);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _buy2.default,
+	    controller: function controller() {
+	        this.styles = _buy4.default;
+	    }
+	};
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	module.exports = "<img class=\"under-header\" src=\"https://github.com/willnickerson/earth-house-juice/blob/master/shop.jpeg?raw=true\">\n<section class=\"buy\">\n    <h1>Where to buy.</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde laboriosam suscipit neque sit ea atque sint voluptate saepe soluta molestiae non ipsa, harum voluptatibus et eligendi vitae error, veritatis ab!</p>\n    <h2>Online store coming soon!</h2>\n</section>";
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(19);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(15)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./buy.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./buy.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(14)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "section.buy {\n  width: 60%;\n  margin: 0 auto;\n  position: relative;\n  top: -360px; }\n  section.buy h1 {\n    font-size: 4em;\n    color: #8282ff;\n    margin: 0;\n    display: inline; }\n  section.buy p {\n    display: inline;\n    font-size: 1.25em; }\n  section.buy h2 {\n    font-size: 3em;\n    font-family: 'Montserrat', sans-serif;\n    text-align: center;\n    margin: 0; }\n\nimg.under-header {\n  z-index: -1;\n  position: relative;\n  top: -110px;\n  display: block; }\n", "", {"version":3,"sources":["/./src/components/buy/src/components/buy/buy.scss"],"names":[],"mappings":"AAAA;EACI,WAAU;EACV,eAAc;EACd,mBAAkB;EAClB,YAAW,EAkBd;EAtBD;IAMQ,eAAc;IACd,eAAuB;IACvB,UAAS;IACT,gBAAe,EAClB;EAVL;IAaQ,gBAAe;IACf,kBAAiB,EACpB;EAfL;IAiBQ,eAAc;IACd,sCAAqC;IACrC,mBAAkB;IAClB,UAAS,EACZ;;AAGL;EACI,YAAW;EACX,mBAAkB;EAClB,YAAW;EACX,eAAc,EACjB","file":"buy.scss","sourcesContent":["section.buy {\n    width: 60%;\n    margin: 0 auto;\n    position: relative;\n    top: -360px;\n    h1 {\n        font-size: 4em;\n        color: rgb(130,130,255);\n        margin: 0;\n        display: inline;\n    }\n\n    p{\n        display: inline;\n        font-size: 1.25em;\n    }\n    h2 {\n        font-size: 3em;\n        font-family: 'Montserrat', sans-serif; \n        text-align: center;\n        margin: 0;\n    }\n}\n\nimg.under-header {\n    z-index: -1;\n    position: relative;\n    top: -110px;\n    display: block;\n}\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _footerContent = __webpack_require__(21);
+	
+	var _footerContent2 = _interopRequireDefault(_footerContent);
+	
+	var _footerContent3 = __webpack_require__(22);
+	
+	var _footerContent4 = _interopRequireDefault(_footerContent3);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _footerContent2.default,
+	    controller: function controller() {
+	        this.styles = _footerContent4.default;
+	    }
+	};
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"footer-container\">\n    <div>\n        <h3>Shop</h3>\n        <ul>\n            <li>Buy Online</li>\n            <li>Buy in Person</li>\n        </ul>\n    </div>\n\n    <div>\n        <h3>About</h3>\n        <ul>\n            <li>Our Juices</li>\n            <li>Our Mission</li>\n            <li>Our Customers</li>\n            <li>Our team</li>\n        </ul>\n    </div>\n\n    <div>\n        <h3>Social Media</h3>\n        <ul>\n            <li>Instagram</li>\n            <li>Facebook</li>\n            <li>Twitter</li>\n        </ul>\n    </div>\n\n    <div>\n        <h3>Contact</h3>\n        <ul>\n            <li>(XXX)XXX-XXXX</li>\n            <li>xxxxx@xxx.com</li>\n        </ul>\n    </div>\n</div>";
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(23);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(15)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./footer-content.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./footer-content.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(14)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".footer-container {\n  background-color: #231f20;\n  height: 300px;\n  width: 100%;\n  color: #666;\n  border-top: 5px solid #666; }\n  .footer-container div {\n    margin-top: 25px;\n    height: 80%;\n    width: 25%;\n    float: left; }\n    .footer-container div h3 {\n      margin-top: 0;\n      text-align: center;\n      font-size: 1em; }\n    .footer-container div ul {\n      list-style-type: none;\n      border-right: .05em solid #666;\n      height: 200px; }\n      .footer-container div ul li {\n        padding-left: 50px;\n        margin: 15px 0;\n        font-size: .85em;\n        font-weight: lighter; }\n", "", {"version":3,"sources":["/./src/components/footer-content/src/components/footer-content/footer-content.scss"],"names":[],"mappings":"AAAA;EACI,0BAAyB;EACzB,cAAa;EACb,YAAW;EACX,YAAW;EACX,2BAA0B,EAyB7B;EA9BD;IAQQ,iBAAgB;IAChB,YAAW;IACX,WAAU;IACV,YAAW,EAkBd;IA7BL;MAaY,cAAa;MACb,mBAAkB;MAClB,eAAc,EACjB;IAhBT;MAmBY,sBAAqB;MACrB,+BAA8B;MAC9B,cAAa,EAOhB;MA5BT;QAuBgB,mBAAkB;QAClB,eAAc;QACd,iBAAgB;QAChB,qBAAoB,EACvB","file":"footer-content.scss","sourcesContent":[".footer-container {\n    background-color: #231f20;\n    height: 300px;\n    width: 100%;\n    color: #666;\n    border-top: 5px solid #666;\n\n    div {\n        margin-top: 25px;\n        height: 80%;\n        width: 25%;\n        float: left;\n        h3 {\n            margin-top: 0;\n            text-align: center;\n            font-size: 1em;\n        }\n\n        ul{\n            list-style-type: none;\n            border-right: .05em solid #666;\n            height: 200px;\n            li {\n                padding-left: 50px;\n                margin: 15px 0;\n                font-size: .85em;\n                font-weight: lighter;   \n            }\n        }\n    }\n}\n\n\n\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _headerContent = __webpack_require__(25);
+	
+	var _headerContent2 = _interopRequireDefault(_headerContent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _headerContent2.default
+	};
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"header-container\">\n    <img class=\"banner-img\" src=\"https://github.com/willnickerson/earth-house-juice/blob/master/wood-banner.jpeg?raw=true\">\n        <div class=\"left\">\n            <h1>Earth House</h1>\n            <nav-bar></nav-bar>\n        </div>\n        <div class=\"right\">\n            <a href=\"https://twitter.com/\">\n                <span class=\"icon-twitter\"></span>\n            </a>\n            <a href=\"https://www.facebook.com/\">\n                <span class=\"icon-facebook2\"></span>\n            </a>\n            <a href=\"https://www.instagram.com/\">\n                <span class=\"icon-instagram\"></span>\n            </a>\n        </div>\n</div>";
+
+/***/ },
 /* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _heroImage = __webpack_require__(27);
+	
+	var _heroImage2 = _interopRequireDefault(_heroImage);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _heroImage2.default,
+	    controller: function controller() {}
+	};
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	module.exports = "<section>\n    <img ng-src=\"https://github.com/willnickerson/earth-house-juice/blob/master/wood-spread-1.jpeg?raw=true\">\n</section>";
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _home = __webpack_require__(29);
+	
+	var _home2 = _interopRequireDefault(_home);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _home2.default,
+	    controller: function controller() {}
+	};
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<hero-image></hero-image>\n<articles></articles>\n";
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _landing = __webpack_require__(31);
+	
+	var _landing2 = _interopRequireDefault(_landing);
+	
+	var _landing3 = __webpack_require__(32);
+	
+	var _landing4 = _interopRequireDefault(_landing3);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _landing2.default,
+	    controller: function controller() {
+	        this.styles = _landing4.default;
+	    }
+	};
+
+/***/ },
+/* 31 */
+/***/ function(module, exports) {
+
+	module.exports = "<img src=\"https://github.com/willnickerson/earth-house-juice/blob/master/blue-spread.jpeg?raw=true\">\n";
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(33);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(15)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./landing.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/sass-loader/index.js?sourceMap!./landing.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(14)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"landing.scss","sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _navBar = __webpack_require__(35);
+	
+	var _navBar2 = _interopRequireDefault(_navBar);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _navBar2.default
+	};
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	module.exports = "<nav>\n    <ul>\n        <li ui-sref=\"home\" class=\"link\">Home</li>\n        <li ui-sref=\"buy\" class=\"link\"link>Buy</li>\n        <li class=\"link\">About</li>\n        <li class=\"link\">Contact</li>\n    </ul>\n</nav>";
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(37);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(15)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/sass-loader/index.js?sourceMap!./main.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/sass-loader/index.js?sourceMap!./main.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(14)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "body {\n  font-family: sans-serif;\n  margin: 0; }\n\nimg {\n  max-width: 100%;\n  margin: 0;\n  padding: 0;\n  z-index: .5;\n  position: relative;\n  display: block; }\n\na {\n  text-decoration: none; }\n\n.link {\n  transition: all 0.3s ease; }\n\n.link:hover {\n  -webkit-transform: scale(1.1);\n  -ms-transform: scale(1.1);\n  transform: scale(1.1);\n  color: #d4f442;\n  cursor: pointer; }\n\nhero-image {\n  margin: 0;\n  padding: 0;\n  border-top: 5px solid #AAA; }\n\n.banner-img {\n  display: block;\n  position: relative;\n  top: -10px;\n  border-bottom: 5px solid #AAA;\n  border-top: 5px solid #AAA; }\n\nheader {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 125px; }\n  header div {\n    position: absolute;\n    top: 5px;\n    width: 100%; }\n  header .banner-img {\n    z-index: 0; }\n  header .left {\n    display: inline-block;\n    max-width: 350px;\n    z-index: 1; }\n  header .right {\n    margin-top: 20px;\n    float: right;\n    text-align: right;\n    z-index: 1; }\n    header .right span {\n      margin-right: 20px; }\n  header h1 {\n    text-align: left;\n    margin: 0 20px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 3.1em;\n    color: white;\n    display: inline-block; }\n  header nav {\n    margin-left: 5px;\n    margin-top: 5px; }\n    header nav ul {\n      list-style-type: none;\n      margin: 0;\n      padding: 0; }\n      header nav ul li {\n        text-align: center;\n        border-right: 1px solid white;\n        width: 23%;\n        display: inline-block;\n        color: white; }\n      header nav ul li:last-child {\n        border: none; }\n\n.icon-facebook2:before {\n  content: \"\\EA91\";\n  color: white;\n  font-size: 30px; }\n\n.icon-instagram:before {\n  content: \"\\EA92\";\n  color: white;\n  font-size: 30px; }\n\n.icon-twitter:before {\n  content: \"\\EA96\";\n  color: white;\n  font-size: 30px;\n  transition: all .3s ease; }\n", "", {"version":3,"sources":["/./src/scss/src/scss/main.scss"],"names":[],"mappings":"AAAA;EACI,wBAAuB;EACvB,UAAS,EACZ;;AAED;EACI,gBAAe;EACf,UAAS;EACT,WAAU;EACV,YAAW;EACX,mBAAkB;EAClB,eAAc,EACjB;;AAED;EACI,sBAAqB,EACxB;;AACD;EACI,0BAAyB,EAC5B;;AACD;EACI,8BAA6B;EAC7B,0BAAyB;EACzB,sBAAqB;EACrB,eAAc;EACd,gBAAe,EAClB;;AAGD;EACI,UAAS;EACT,WAAU;EACV,2BAA0B,EAC7B;;AAED;EACI,eAAc;EACd,mBAAkB;EAClB,WAAU;EACV,8BAA6B;EAC7B,2BAA0B,EAC7B;;AAED;EACI,YAAW;EACX,mBAAkB;EAClB,OAAM;EACN,QAAO;EACP,cAAa,EAkDhB;EAvDD;IAOQ,mBAAkB;IAClB,SAAQ;IACR,YAAW,EACd;EAVL;IAYQ,WAAU,EACb;EAbL;IAeQ,sBAAqB;IACrB,iBAAgB;IAChB,WAAU,EACb;EAlBL;IAoBQ,iBAAgB;IAChB,aAAY;IACZ,kBAAiB;IACjB,WAAU,EAIb;IA3BL;MAyBY,mBAAkB,EACrB;EA1BT;IA6BQ,iBAAgB;IAChB,eAAc;IACd,sCAAqC;IACrC,iBAAgB;IAChB,aAAY;IACZ,sBACJ,EAAE;EAnCN;IAqCQ,iBAAgB;IAChB,gBAAe,EAgBlB;IAtDL;MAwCY,sBAAqB;MACrB,UAAS;MACT,WAAU,EAWb;MArDT;QA4CgB,mBAAkB;QAClB,8BAA6B;QAC7B,WAAU;QACV,sBAAqB;QACrB,aAAY,EACf;MAjDb;QAmDgB,aAAY,EACf;;AAKb;EACI,iBAAgB;EAChB,aAAY;EACZ,gBAAe,EAClB;;AAED;EACI,iBAAgB;EAChB,aAAY;EACZ,gBAAe,EAClB;;AAED;EACI,iBAAgB;EAChB,aAAY;EACZ,gBAAe;EACf,yBAAwB,EAC3B","file":"main.scss","sourcesContent":["body {\n    font-family: sans-serif;\n    margin: 0;\n}\n\nimg {\n    max-width: 100%;\n    margin: 0;\n    padding: 0;\n    z-index: .5;\n    position: relative;\n    display: block;\n}\n\na {\n    text-decoration: none;\n}\n.link {\n    transition: all 0.3s ease;\n}\n.link:hover {\n    -webkit-transform: scale(1.1);\n    -ms-transform: scale(1.1);\n    transform: scale(1.1);\n    color: #d4f442;\n    cursor: pointer;\n}\n\n\nhero-image {\n    margin: 0;\n    padding: 0;\n    border-top: 5px solid #AAA; \n}\n\n.banner-img {\n    display: block;\n    position: relative;\n    top: -10px;\n    border-bottom: 5px solid #AAA;\n    border-top: 5px solid #AAA;    \n}\n\nheader {\n    width: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 125px;\n    div {\n        position: absolute;\n        top: 5px;\n        width: 100%;\n    }\n    .banner-img {\n        z-index: 0;\n    }\n    .left {\n        display: inline-block;\n        max-width: 350px;\n        z-index: 1;\n    }\n    .right {\n        margin-top: 20px;\n        float: right;\n        text-align: right;\n        z-index: 1;\n        span {\n            margin-right: 20px;\n        }\n    }\n    h1 {\n        text-align: left;\n        margin: 0 20px;\n        font-family: 'Montserrat', sans-serif;\n        font-size: 3.1em;\n        color: white;\n        display: inline-block\n    }\n    nav {\n        margin-left: 5px;\n        margin-top: 5px;  \n        ul {\n            list-style-type: none;\n            margin: 0;\n            padding: 0;\n            li {\n                text-align: center;\n                border-right: 1px solid white;\n                width: 23%;\n                display: inline-block;\n                color: white;\n            }\n            li:last-child {\n                border: none;\n            }\n        }\n    }\n}\n\n.icon-facebook2:before {\n    content: \"\\ea91\";\n    color: white;\n    font-size: 30px;\n}\n\n.icon-instagram:before {\n    content: \"\\ea92\";\n    color: white;\n    font-size: 30px;\n}\n\n.icon-twitter:before {\n    content: \"\\ea96\";\n    color: white;\n    font-size: 30px;\n    transition: all .3s ease;\n}\n\n// .icon-twitter:hover {\n//     color: yellow;\n// }\n\n// .icon {\n//     transition: all .3s ease;\n// }\n\n// .icon:hover {\n//     color: yellow;\n//     cursor: crosshair;\n// }"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -42407,7 +42649,7 @@
 	//# sourceMappingURL=angular-ui-router.js.map
 
 /***/ },
-/* 27 */
+/* 39 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42420,12 +42662,23 @@
 	
 	function routes($stateProvider, $urlRouterProvider) {
 	    $stateProvider.state({
-	        name: 'home',
+	        name: 'landing',
 	        url: '/',
+	        component: 'landing'
+	    });
+	    $stateProvider.state({
+	        name: 'home',
+	        url: '/home',
 	        component: 'home'
 	    });
 	
-	    $urlRouterProvider.otherwise('/');
+	    $stateProvider.state({
+	        name: 'buy',
+	        url: '/buy',
+	        component: 'buy'
+	    });
+	
+	    $urlRouterProvider.otherwise('/home');
 	}
 
 /***/ }
